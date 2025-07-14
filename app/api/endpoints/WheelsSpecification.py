@@ -12,7 +12,7 @@ def Create_Wheels(wheels:Wheels,db:Session=Depends(get_db)):
     db.commit()
     db.refresh(db_form)
     return JSONResponse(
-        status_code=201,
+        status_code=status.HTTP_201_CREATED,
         content={
             "data": {
                 "formNumber": db_form.formNumber,
@@ -51,7 +51,7 @@ def getWheel(form_number: str=Query(None),submitted_by:str=Query(None),submitted
     }
 
     return JSONResponse(
-        status_code=200,
+        status_code=status.HTTP_200_OK,
         content={
             "data": [result],
             "message": "Filtered wheel specification forms fetched successfully.",

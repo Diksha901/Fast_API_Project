@@ -1,4 +1,4 @@
-from fastapi import APIRouter,Depends
+from fastapi import APIRouter,Depends,status
 from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session 
 from ...db.database import get_db
@@ -12,7 +12,7 @@ def bogie_checking(bogie:Bogie,db:Session=Depends(get_db)):
     db.commit()
     db.refresh(db_form)
     return JSONResponse(
-        status_code=201,
+        status_code=status.HTTP_201_CREATED,
         content={
             "data": {
                 "formNumber": db_form.formNumber,

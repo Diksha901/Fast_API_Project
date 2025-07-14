@@ -1,6 +1,6 @@
-from fastapi import FastAPI,Depends,HTTPException,status,Query,APIRouter
-from .api.endpoints import BogieSpecs #import create_bogie
-from .api.endpoints import WheelsSpecification #import wheel
+from fastapi import FastAPI
+from .api.endpoints import BogieSpecs 
+from .api.endpoints import WheelsSpecification 
 
 app=FastAPI()
 
