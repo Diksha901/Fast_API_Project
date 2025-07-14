@@ -5,9 +5,11 @@
      * run : python -m venv .<Your_Virtual_Environment_Name>
      * to activate : .<Your_Virtual_Environment_Name>\Scripts\activate
 4. Run: `pip install -r requirements.txt`
-5. Set DB URL in `.env`
-6. Run migrations if needed
-7. Start: `uvicorn app.main:app --reload`
+5. Set Up postgres with username and password.
+6. Create the database using pgAdmin4 before running the project 
+7. Set DB URL in `.env`
+8. Run migrations if needed
+9. Start: `uvicorn app.main:app --reload`
 
 ##  APIs Implemented
 1. `/api/forms/bogie-checksheet` , POST request , submits the details of bogie through form number to the table created in the database 
