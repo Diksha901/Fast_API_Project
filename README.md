@@ -1,11 +1,13 @@
 
 ##  Setup Instructions
 1. Clone the repo
-2. Create virtual environment & activate
-3. Run: `pip install -r requirements.txt`
-4. Set DB URL in `.env`
-5. Run migrations if needed
-6. Start: `uvicorn app.main:app --reload`
+2. Create virtual environment & activate :
+     * run : python -m venv .<Your_Virtual_Environment_Name>
+     * to activate : .<Your_Virtual_Environment_Name>\Scripts\activate
+4. Run: `pip install -r requirements.txt`
+5. Set DB URL in `.env`
+6. Run migrations if needed
+7. Start: `uvicorn app.main:app --reload`
 
 ##  APIs Implemented
 1. `/api/forms/bogie-checksheet` , POST request , submits the details of bogie through form number to the table created in the database 
